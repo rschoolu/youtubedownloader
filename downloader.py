@@ -13,8 +13,8 @@ def main():
     #print("Link valid")
     #print("Downloading..."
     for i in range(links.__len__()):
-        name = f'{filenamee.split(".")[0]}{i}.{filenamee.split(".")[1]}'
         ytVideo = YouTube(links[i])
+        name = f'{filenamee.split(".")[0]}{i}.{filenamee.split(".")[1]}'
         if audio == "0":
             ytVideo.streams.get_highest_resolution().download('./',filename=name)
         elif audio == "1":
