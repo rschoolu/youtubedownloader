@@ -11,8 +11,8 @@ audio = sys.argv[3]
 def justDo():
     global filenamee
     global links
-    name = f'{filenamee.split(".")[0]}{i}.{filenamee.split(".")[1]}'
     for i in range(links.__len__()):
+        name = f'{filenamee.split(".")[0]}{i}.{filenamee.split(".")[1]}'
         ytVideo = YouTube(links[i])
         if audio == "0":
             ytVideo.streams.get_highest_resolution().download('./',filename=name)
